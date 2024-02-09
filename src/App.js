@@ -1,6 +1,4 @@
 import React from 'react';
-import Home from './components/Home';
-import About from './components/About';
 import { useEffect } from "react";
 import {
   Routes,
@@ -9,6 +7,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import Frame from "./pages/Frame";
+import About from './components/About';
+import Home from './components/Home';
+
 
 function App() {
   const action = useNavigationType();
@@ -49,7 +50,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Frame />} />
+      <Route path="/" element={<About />} />
     </Routes>
+    
+
   );
 }
 export default App;

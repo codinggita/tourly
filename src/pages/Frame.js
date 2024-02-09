@@ -1,4 +1,46 @@
+import React from 'react';
 import "./Frame.css";
+import About from '../components/About';
+import Home from '../components/Home';
+import {
+  Routes,
+  Route,
+  useNavigationType,
+  useLocation,
+} from "react-router-dom";
+
+const Framed = () => {
+  const handleInquireNow = async () => {
+    const question = prompt('Enter your inquiry:'); // You can use any method to get the user's question
+
+    try {
+      const response = await fetch('http://localhost:5000/inquire', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ question }),
+      });
+
+      const data = await response.json();
+      alert(`Response from server: ${data.answer}`);
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    }
+  };
+
+  return (
+    
+    // ... Your existing JSX code
+
+    <button onClick={handleInquireNow} className="btn btn-secondary" id="inquireNowButton" aria-label="Inquire Now">
+      Inquire now
+    </button>
+
+    // ... Your existing JSX code
+  );
+};
 
 const Frame = () => {
   return (
