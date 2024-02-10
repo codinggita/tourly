@@ -1,7 +1,7 @@
 # Tourly
 project name: Tourly
 my website, named "Tourly - Travel Agency," aims to solve the problem of helping users plan and book their travel experiences.
-
+# Front End Link: https://tourly-master.netlify.app/
 # Figma Design Link: https://www.figma.com/file/CdxyrF4yzbKLbngUAPG6S7/Untitled?type=design&node-id=1-2&mode=design&t=zM0EsdRC7NZVUN1X-0
 
 # Here are some key features and indications of the problems your website is addressing:
@@ -15,7 +15,7 @@ my website, named "Tourly - Travel Agency," aims to solve the problem of helping
 
 5. Responsive Design: The use of meta tags for responsive design and the inclusion of the viewport meta tag indicates that the website is designed to be accessible on various devices, addressing the problem of users accessing the site from different platforms.
 
-#Here are some similar and well-known solutions:
+# Here are some similar and well-known solutions:
 1. Booking.com: Known for its extensive hotel listings, Booking.com also offers a wide range of accommodations, flights, and rental cars. Users can find deals and reviews for various travel options.
 
 2. Trivago: Trivago is a hotel search platform that compares prices from various booking sites. Users can find the best hotel deals based on their preferences.
@@ -25,20 +25,20 @@ my website, named "Tourly - Travel Agency," aims to solve the problem of helping
 # How do you want to solve it?
 1. User Interface and Experience:
 
-a) Ensure a clean and intuitive user interface that makes it easy for users to navigate through the website.
-b) Consider optimizing the layout for mobile devices to enhance the mobile user experience.
-c) Test the website's accessibility to ensure it is usable by people with disabilities.
+-  Ensure a clean and intuitive user interface that makes it easy for users to navigate through the website.
+-  Consider optimizing the layout for mobile devices to enhance the mobile user experience.
+-  Test the website's accessibility to ensure it is usable by people with disabilities.
 
 2. Search Functionality:
 
-a) Enhance the tour search form by providing autocomplete suggestions for destination input.
-b) Consider adding filters to help users refine search results based on preferences such as budget, travel dates, and activities.
+-  Enhance the tour search form by providing autocomplete suggestions for destination input.
+-  Consider adding filters to help users refine search results based on preferences such as budget, travel dates, and activities.
  
 3. Booking Process:
 
-a) Streamline the booking process to make it as simple and efficient as possible.
-b) Provide clear and transparent information about booking terms, cancellation policies, and any additional fees.
-c) Consider implementing a user account system to allow users to manage their bookings and preferences.
+-  Streamline the booking process to make it as simple and efficient as possible.
+-  Provide clear and transparent information about booking terms, cancellation policies, and any additional fees.
+-  Consider implementing a user account system to allow users to manage their bookings and preferences.
 
 # List of features you want to implement.
 - user can list and unlist packages.
