@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Frame.css";
+import { useEffect } from "react";
+
 import About from '../components/About';
 import Home from '../components/Home';
 import {
@@ -8,6 +10,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
+
 
 const Framed = () => {
   const handleInquireNow = async () => {
@@ -42,7 +45,65 @@ const Framed = () => {
   );
 };
 
+
+
 const Frame = () => {
+  useEffect(() => {
+    // Your JavaScript code here
+    const overlay = document.querySelector("[data-overlay]");
+    const navOpenBtn = document.querySelector("[data-nav-open-btn]");
+    const navbar = document.querySelector("[data-navbar]");
+    const navCloseBtn = document.querySelector("[data-nav-close-btn]");
+    const navLinks = document.querySelectorAll("[data-nav-link]");
+
+    const navElemArr = [navOpenBtn, navCloseBtn, overlay];
+
+    const navToggleEvent = function (elem) {
+      for (let i = 0; i < elem.length; i++) {
+        elem[i].addEventListener("click", function () {
+          navbar.classList.toggle("active");
+          overlay.classList.toggle("active");
+        });
+      }
+    }
+
+    navToggleEvent(navElemArr);
+    navToggleEvent(navLinks);
+
+    const header = document.querySelector("[data-header]");
+    const goTopBtn = document.querySelector("[data-go-top]");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY >= 200) {
+        header.classList.add("active");
+        goTopBtn.classList.add("active");
+      } else {
+        header.classList.remove("active");
+        goTopBtn.classList.remove("active");
+      }
+    });
+  }, []); // Empty dependency array means this effect will only run once after the component is mounted
+
+  const handleInquireNow = async () => {
+    const question = prompt('Enter your inquiry:');
+
+    try {
+      const response = await fetch('http://localhost:5000/inquire', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ question }),
+      });
+
+      const data = await response.json();
+      alert(`Response from server: ${data.answer}`);
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    }
+  };
+
   return (
     <div id="top">
       <header class="header" data-header>
